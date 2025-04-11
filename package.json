@@ -3,7 +3,8 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "typeorm": "typeorm-ts-node-esm migration:generate src/migration/InitialMigration --dataSource src/data-source.ts"
+    "seed": "bun src/seed.ts",
+    "chat": "bun src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
