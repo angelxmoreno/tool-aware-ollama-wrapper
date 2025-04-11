@@ -1,0 +1,26 @@
+{
+  "name": "typeorm-test",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "typeorm": "typeorm-ts-node-esm migration:generate src/migration/InitialMigration --dataSource src/data-source.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "ts-node": "^10.9.2",
+    "typeorm-ts-node-esm": "^0.3.20"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "mysql2": "^3.14.0",
+    "ollama": "^0.5.14",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.22"
+  }
+}
