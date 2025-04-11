@@ -1,4 +1,3 @@
-// src/tools.ts
 import { AppDataSource } from './data-source';
 import { EmployeeEntity } from './entity/EmployeeEntity';
 import { DepartmentEntity } from './entity/DepartmentEntity';

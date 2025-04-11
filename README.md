@@ -1,4 +1,4 @@
-# 🧠 Tool-Aware AI Assistant with Bun, TypeORM, SQLite, and Ollama
+# 🧠 Tool-Aware Ollama Wrapper
 
 This is a local-first AI assistant prototype powered by **Bun**, **SQLite**, **TypeORM**, and **Ollama** running **Mistral** or **LLaMA 3.1** models. The assistant can simulate tool use by calling backend functions in natural language and receiving the results.
 
@@ -9,9 +9,9 @@ This is a local-first AI assistant prototype powered by **Bun**, **SQLite**, **T
 - 🧪 Faker-based seed data with employees and departments
 - 🤖 Ollama LLM interface with support for tool-style prompts
 - 🛠️ Tools exposed:
-    - `get_employee_by_name(name)`
-    - `get_employee_by_email(email)`
-    - `get_employee_manager(employeeId)`
+  - `get_employee_by_name(name)`
+  - `get_employee_by_email(email)`
+  - `get_employee_manager(employeeId)`
 - 🧵 Interactive CLI loop with natural language queries
 - 🔁 Supports multi-turn tool chaining (AI asks for name → gets ID → gets manager)
 
@@ -55,7 +55,15 @@ You: who is Jane Doe's manager?
 
 ---
 
-## 🧠 How It Works
+## 📜 Scripts
+
+The following scripts are available in the `package.json` file:
+
+- **`bun run seed`**: Seeds the database with initial data, including 100 employees and 10 departments.
+- **`bun run chat`**: Starts the AI assistant CLI for interactive conversations.
+- **`bun run lint`**: Runs ESLint to analyze the code for potential issues and enforce code quality standards.
+- **`bun run lint:fix`**: Runs ESLint with the `--fix` option to automatically correct fixable issues in the codebase.
+- **`bun run format`**: Formats the code using Prettier to ensure consistent code style.
 
 The LLM receives a system prompt explaining how to respond using tool-style syntax. For example:
 ```
@@ -129,6 +137,10 @@ who is her manager?
 - [ ] Enable OpenAPI or HTTP version of the tools
 - [ ] Support streaming responses from Ollama
 - [ ] Export conversation history
+- [ ] **Standardize tool definitions**: Implement a schema for tool definitions that includes input and output specifications, enabling automated validation and documentation.
+- [ ] **Implement capability discovery**: Allow the AI assistant to query available tools dynamically, facilitating adaptability to different environments and toolsets.
+- [ ] **Leverage existing MCP SDKs**: Explore MCP's official SDKs to integrate standardized communication protocols, enhancing compatibility with other MCP-compliant systems.
+- [ ] **Enhance security measures**: Ensure that tool executions are sandboxed and authenticated to prevent unauthorized access or execution, addressing potential security concerns highlighted in MCP discussions.
 
 ---
 
