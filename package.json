@@ -1,6 +1,6 @@
 {
   "name": "typeorm-test",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "scripts": {
     "typeorm": "typeorm-ts-node-esm migration:generate src/migration/InitialMigration --dataSource src/data-source.ts"
